@@ -9,13 +9,11 @@
     },
     {
       "src": "backend/index.js",
-      "use": "@vercel/node",
-      "config": { "includeFiles": ["backend/**"] }
+      "use": "@vercel/node"
     },
     {
       "src": "public/index.php",
-      "use": "vercel-php",
-      "config": { "includeFiles": ["app/**", "config/**", "database/**", "resources/**", "routes/**", "vendor/**", "public/**"] }
+      "use": "vercel-php"
     }
   ],
   "routes": [
