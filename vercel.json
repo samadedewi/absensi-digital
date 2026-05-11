@@ -9,25 +9,19 @@
     },
     {
       "src": "backend/index.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "face_api/app.py",
-      "use": "@vercel/python"
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["backend/**"] }
     },
     {
       "src": "public/index.php",
-      "use": "vercel-php"
+      "use": "vercel-php",
+      "config": { "includeFiles": ["app/**", "config/**", "database/**", "resources/**", "routes/**", "vendor/**", "public/**"] }
     }
   ],
   "routes": [
     {
       "src": "/api/backend/(.*)",
       "dest": "backend/index.js"
-    },
-    {
-      "src": "/api/face/(.*)",
-      "dest": "face_api/app.py"
     },
     {
       "src": "/laravel/(.*)",

@@ -1,0 +1,10 @@
+node_modules
+vendor
+face_api/venv
+.git
+.github
+tests
+storage/logs
+storage/framework/views
+public/storage
+*.log

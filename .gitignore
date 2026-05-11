@@ -22,3 +22,6 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+/face_api/venv
+/backend/node_modules
+/frontend/node_modules
