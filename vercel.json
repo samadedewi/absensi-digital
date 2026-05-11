@@ -17,7 +17,7 @@
     },
     {
       "src": "public/index.php",
-      "use": "vercel-php@0.7.0"
+      "use": "vercel-php"
     }
   ],
   "routes": [
