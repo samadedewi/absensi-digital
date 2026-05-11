@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "framework": "vite",
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
+      "src": "backend/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "face_api/app.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "public/index.php",
+      "use": "vercel-php@0.7.0"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/backend/(.*)",
+      "dest": "backend/index.js"
+    },
+    {
+      "src": "/api/face/(.*)",
+      "dest": "face_api/app.py"
+    },
+    {
+      "src": "/laravel/(.*)",
+      "dest": "public/index.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/$1",
+      "continue": true
+    }
+  ]
+}
