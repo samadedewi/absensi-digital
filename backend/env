@@ -1,0 +1,2 @@
+DATABASE_URL="postgresql://postgres:FwNQETHCN05IY8gM@db.fribveshtywgmrkblozk.supabase.co:5432/postgres"
+PORT=5000
